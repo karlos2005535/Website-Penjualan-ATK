@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACK Supplier Alat Tulis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">ACK Supplier</div>
+      <ul class="nav-links">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#products">Katalog</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Supplier Alat Tulis Terlengkap</h1>
+        <p>
+          Solusi kebutuhan kantor dan sekolah Anda dengan harga grosir terbaik.
+        </p>
+        <button onclick="scrollToProducts()">Lihat Produk</button>
+      </div>
+    </section>
+
+    <section id="products" class="container">
+      <h2>Produk Unggulan Kami</h2>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Cari alat tulis..." />
+      </div>
+      <div id="product-list" class="product-grid"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ACK Supplier Alat Tulis. Dibuat oleh Tim Charlos.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

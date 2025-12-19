@@ -1,0 +1,204 @@
+/* --- KONFIGURASI WARNA (Bisa disesuaikan dengan gambar background) --- */
+:root {
+  --primary-color: #2c3e50; /* Biru Tua (untuk Navbar/Footer) */
+  --accent-color: #e67e22; /* Oranye (untuk Tombol/Harga) */
+  --text-dark: #333; /* Warna Teks Utama */
+  --text-light: #f4f4f4; /* Warna Teks Terang */
+  --bg-overlay: rgba(
+    255,
+    255,
+    255,
+    0.92
+  ); /* Lapisan putih transparan agar konten terbaca */
+}
+
+/* Reset Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  /* INTEGRASI BACKGROUND IMAGE DISINI */
+  /* Pastikan file sudah dipindah ke folder images/ dan dinamai background-ack.png */
+  background-image: url("Website-Penjualan-ACK/images/Gemini_Generated_Image_ia5pcmia5pcmia5p.png");
+  background-size: cover; /* Gambar menutupi seluruh layar */
+  background-position: center; /* Gambar di tengah */
+  background-attachment: fixed; /* Efek Parallax: Gambar diam saat discroll */
+  color: var(--text-dark);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+.cart-icon {
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  /* Kita hapus gambar spesifik hero sebelumnya, kita pakai overlay gelap */
+  /* agar background utama yang terlihat samar-samar */
+  background: rgba(44, 62, 80, 0.85); /* Overlay biru tua transparan */
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-light);
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  margin-top: 20px;
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.hero button:hover {
+  background-color: #d35400;
+}
+
+/* Products Container */
+/* Ini penting: Kita beri kotak putih transparan agar produk menonjol dari background */
+.container {
+  padding: 40px 5%;
+  background-color: var(--bg-overlay); /* Menggunakan variabel overlay */
+  margin: 30px auto; /* Memberi jarak dari atas dan bawah */
+  max-width: 1200px; /* Agar tidak terlalu lebar di layar besar */
+  border-radius: 10px; /* Membulatkan sudut */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.search-bar {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.search-bar input {
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #ddd;
+  border-radius: 25px; /* Kolom pencarian lebih modern */
+  outline: none;
+  transition: border-color 0.3s;
+}
+.search-bar input:focus {
+  border-color: var(--primary-color);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  ); /* Sedikit lebih kecil agar muat banyak */
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #eee;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain; /* Gunakan 'cover' jika ingin gambar penuh kotak */
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  display: block;
+}
+
+.btn-add {
+  background-color: var(--primary-color); /* Tombol beli warna biru tua */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Tombol penuh */
+}
+
+.btn-add:hover {
+  background-color: #34495e;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 25px;
+  margin-top: 0; /* Margin ditangani oleh container sebelumnya */
+}
