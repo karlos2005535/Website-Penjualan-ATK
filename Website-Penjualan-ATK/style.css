@@ -21,9 +21,8 @@
 }
 
 body {
-  /* INTEGRASI BACKGROUND IMAGE DISINI */
-  /* Pastikan file sudah dipindah ke folder images/ dan dinamai background-ack.png */
-  background-image: url("Website-Penjualan-ACK/images/Gemini_Generated_Image_ia5pcmia5pcmia5p.png");
+  background-image: url("images/Gemini_Generated_Image_ia5pcmia5pcmia5p.png");
+
   background-size: cover; /* Gambar menutupi seluruh layar */
   background-position: center; /* Gambar di tengah */
   background-attachment: fixed; /* Efek Parallax: Gambar diam saat discroll */
